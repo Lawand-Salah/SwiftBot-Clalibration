@@ -4,9 +4,9 @@ import swiftbot.SwiftBotAPI;
 
 public class Validation {
 	
-static SwiftBotAPI swiftbot = SwiftBotAPI.INSTANCE;
+	static SwiftBotAPI swiftbot = SwiftBotAPI.INSTANCE;
 	
-	final static double kValue = 3.8022; // time in seconds
+	final static double kValue = 0.3802; // time in seconds
 	final static int timeSeconds = 2;
 
 	public static void main(String[] args) {
@@ -26,6 +26,7 @@ static SwiftBotAPI swiftbot = SwiftBotAPI.INSTANCE;
 		reader.nextLine();	
 		reader.nextLine();
 		swiftbot.move(finalSpeed, finalSpeed, timeSeconds * 1000);
+		
 		
 		System.out.println("Test Complete.");
 		reader.close();
