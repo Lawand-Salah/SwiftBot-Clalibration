@@ -1,5 +1,4 @@
 import swiftbot.Button;
-
 import swiftbot.SwiftBotAPI;
 
 public class Calibration {
@@ -23,25 +22,19 @@ public class Calibration {
 		System.out.println("Ready to start moving at " + speedPercentages[i] + "% speed.");
 
 		swiftbot.enableButton(Button.X, () -> {
-
 			int currentSpeed = speedPercentages[i];
-
+			
 			System.out.println("Moving at (" + currentSpeed + ", " + currentSpeed + ")...");
-
+			
+			
 			swiftbot.move(currentSpeed, currentSpeed, time * 1000);
-
 			i++;
-
 			if (i < speedPercentages.length) {
-
 				System.out.println("\nReady to start moving at " + speedPercentages[i] + "% speed.");
-
 			} else {
 
 				System.out.println("\nFinished testing!");
-
 				swiftbot.disableButton(Button.X);
-
 				System.exit(0);
 
 			}
